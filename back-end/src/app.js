@@ -9,6 +9,14 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Add a / root route so the service URL doesn't return "route not found"
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "API is running. Use /api/health for health check and /api/* for endpoints.",
+  });
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
 
