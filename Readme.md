@@ -110,9 +110,16 @@ The React app runs via Vite (usually http://localhost:5173). No further front-en
 
 The back-end seeds an admin user and sample users/tasks on server start (see back-end/src/seed).
 
-Admin credentials:
+Admin credential:
 - Email: admin@hyperverge.co
 - Password: admin123
+
+User credential:
+- Email: john@example.com
+- Email: jane@example.com'
+- Email: bob@example.com
+
+- Password: password123
 
 Sample users are created by seed scripts (check back-end/src/seed for details).
 
